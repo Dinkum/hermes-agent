@@ -10,6 +10,7 @@ import { frModelMenu } from './fr_model_menu'
 import { frNotices } from './fr_notices'
 import { frOnboarding } from './fr_onboarding'
 import { frProjects } from './fr_projects'
+import { frSettingsNav, frSettingsPage } from './fr_settings_nav'
 import { frSharedMetrics } from './fr_shared_metrics'
 import { frUpdateChannel } from './fr_update_channel'
 import { introFr } from './intro-fr'
@@ -745,25 +746,8 @@ export const frOverrides = {
       pageCount: (n: number) => (n === 1 ? '1 page' : `${n} pages`),
       missing: "Ce plugin n'a pas de page de réglages. Il est peut-être désactivé ou désinstallé."
     },
-    nav: {
-      providers: 'Fournisseurs',
-      providerAccounts: 'Comptes',
-      providerApiKeys: 'Clés API',
-      providerCustomEndpoints: 'Points de terminaison personnalisés',
-      providerLocalModels: 'Modèles locaux',
-      gateway: 'Gateway',
-      apiKeys: 'Outils et clés',
-      keybinds: 'Raccourcis clavier',
-      keysTools: 'Outils',
-      keysSettings: 'Paramètres',
-      mcp: 'MCP',
-      archivedChats: 'Conversations archivées',
-      sessions: 'Sessions',
-      about: 'À propos',
-      billing: 'Facturation',
-      notifications: 'Notifications',
-      vault: 'Mots de passe et identifiants'
-    },
+    nav: frSettingsNav,
+    page: frSettingsPage,
     plugins: {
       title: 'Plugins du desktop',
       openFolder: 'Ouvrir le dossier des plugins Desktop',
